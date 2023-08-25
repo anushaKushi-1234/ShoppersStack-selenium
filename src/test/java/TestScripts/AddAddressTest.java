@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import genericLibraries.BaseClass;
 import pomPages.MyAddressPage;
+import pomPages.MyProfilePage;
 
 public class AddAddressTest extends BaseClass{
 	
@@ -21,8 +22,8 @@ public class AddAddressTest extends BaseClass{
 		home.selectMyProfile();
 		Thread.sleep(3000);
 		myProfilePage.clickMyAddresses();
-		MyAddressPage.clickAddAddress();
-		address.addAddressDetails(webUtil, map, jutil);
+		//MyAddressPage.clickAddAddress();
+		address.addAddressDetails(webUtil, map);
 		Thread.sleep(2000);
 		Assert.assertEquals(MyAddressPage.getsuccesmsg(), "Successfully added");
 		Thread.sleep(2000);

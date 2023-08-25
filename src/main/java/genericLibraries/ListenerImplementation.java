@@ -29,7 +29,7 @@ public class ListenerImplementation implements ITestListener {
 		System.out.println(result.getMethod().getMethodName()+"Fail");
 		System.out.println("Failure occured due to: " +result.getThrowable());
 		
-		TakesScreenshot ts=(TakesScreenshot)(BaseClass.driver);
+		TakesScreenshot ts=(TakesScreenshot)(BaseClass.sdriver);
 		
 		JavaUtility jutil=new JavaUtility();
 		File src=ts.getScreenshotAs(OutputType.FILE);
@@ -37,7 +37,7 @@ public class ListenerImplementation implements ITestListener {
 		try {
 			FileUtils.copyFile(src, dest);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 	
