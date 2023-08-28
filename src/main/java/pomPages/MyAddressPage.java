@@ -14,7 +14,7 @@ public class MyAddressPage {
 	@FindBy(xpath = "//div[text()='successfully added']")
 	private WebElement successMsg;
 	
-	//Initilization
+	//Initialization
 	public MyAddressPage(WebDriver driver) {
 	PageFactory.initElements(driver, this);
 }

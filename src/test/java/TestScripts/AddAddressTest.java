@@ -25,7 +25,7 @@ public class AddAddressTest extends BaseClass{
 		//MyAddressPage.clickAddAddress();
 		address.addAddressDetails(webUtil, map);
 		Thread.sleep(2000);
-		Assert.assertEquals(MyAddressPage.getsuccesmsg(), "Successfully added");
+		Assert.assertEquals(address.g, "Successfully added");
 		Thread.sleep(2000);
 	}
 
